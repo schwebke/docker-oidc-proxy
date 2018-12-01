@@ -22,7 +22,7 @@ environment variables is used in this image:
 * `OID_SESSION_CHECK_SSI`: check SSI or not (`on` or `off`)
 * `OID_SESSION_NAME`: cookie session name
 
-* `OID_REDIRECT_PATH`: Redirect path after authentication
+* `OID_REDIRECT_URI`: Redirect URI after authentication
 * `OID_DISCOVERY`: OpenID provider well-known discovery URL
 * `OID_CLIENT_ID`: OpenID Client ID
 * `OID_CLIENT_SECRET`: OpenID Client Secret
@@ -35,6 +35,7 @@ environment variables is used in this image:
 
 * `ADD_HOST_HEADER`: pass the proxy host header downstream (`true` or `false`)
 * `ADD_USER_HEADER`: pass the user (preferred\_username claim) as X-USER header downstream (`true` or `false`)
+* `ADD_TOKEN_HEADER`: pass the bearer token as Authorization header downstream (`true` or `false`)
 
 ```
 docker run \

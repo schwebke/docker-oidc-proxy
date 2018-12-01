@@ -34,6 +34,7 @@ environment variables is used in this image:
 * `PROXY_PROTOCOL`: Protocol to the service to proxy (`http` or `https`)
 
 * `ADD_HOST_HEADER`: pass the proxy host header downstream (`true` or `false`)
+* `ADD_USER_HEADER`: pass the user (preferred\_username claim) as X-USER header downstream (`true` or `false`)
 
 ```
 docker run \

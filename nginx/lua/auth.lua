@@ -35,3 +35,6 @@ end
 
 ngx.log(ngx.INFO, "Authentication successful, setting Auth header...")
 ngx.req.set_header("Authorization", "Bearer "..session.data.enc_id_token)
+if os.getenv("ADD_USER_HEADER") == "true" then
+    ngx.req.set_header("X-USER", res.id_token.preferred_username)
+end
